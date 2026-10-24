@@ -9,7 +9,7 @@ const STUDIO_CONFIG = {
   brandName: 'Nexo Webs',
   whatsappNumber: '56972652673', // +56 9 7265 2673 (Formato internacional sin '+' ni espacios)
   whatsappDisplay: '+56 9 7265 2673',
-  contactEmail: 'hola@nexowebs.com',
+  contactEmail: 'nexowebs.1@gmail.com',
 };
 
 document.addEventListener('DOMContentLoaded', () => {
