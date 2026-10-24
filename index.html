@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- MANDATORY: Declare support for both light and dark themes and prevent FOUC -->
+  <meta name="color-scheme" content="light dark" />
+  <script>
+    try {
+      document.querySelector('meta[name="color-scheme"]').content = localStorage.getItem("color-scheme") ?? "light dark";
+    } catch {}
+  </script>
+  <title>Nexo Webs — Diseño y Desarrollo Web para Emprendimientos</title>
+  <meta name="description" content="Creamos páginas web personalizadas, minimalistas y enfocadas en ventas para pequeños emprendimientos. Trato directo, entrega ágil y optimización total para celulares." />
+  <link rel="icon" type="image/svg+xml" href="Frame%201.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Header Minimalista -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Nexo Webs - Inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="Frame%201.svg" alt="" width="28" height="30" class="brand-logo-svg" />
+        </span>
+        <span class="brand-name" data-brand-name>Nexo Webs</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#soluciones" class="nav-link">Formatos Web</a></li>
+          <li><a href="#ejemplos" class="nav-link">Ejemplos por Rubro</a></li>
+          <li><a href="#proceso" class="nav-link">Proceso</a></li>
+          <li><a href="#equipo" class="nav-link">Equipo</a></li>
+          <li><a href="#preguntas" class="nav-link">Preguntas</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <span class="status-pill" title="Disponibilidad actual para nuevos proyectos">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Agenda abierta</span>
+        </span>
+
+        <!-- Botón de Modo Oscuro / Claro -->
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" title="Cambiar tema de color">
+          <span class="theme-option if-light">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+            <span class="sr-only">Cambiar a modo oscuro</span>
+          </span>
+          <span class="theme-option if-dark">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+            </svg>
+            <span class="sr-only">Cambiar a modo claro</span>
+          </span>
+        </button>
+
+        <a href="#cotizar" class="btn btn-primary btn-sm">
+          <span>Cotizar proyecto</span>
+          <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú de navegación">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Móvil -->
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <div class="container mobile-nav-inner">
+        <a href="#soluciones" class="mobile-nav-link">Formatos Web</a>
+        <a href="#ejemplos" class="mobile-nav-link">Ejemplos por Rubro</a>
+        <a href="#proceso" class="mobile-nav-link">Cómo Trabajamos</a>
+        <a href="#equipo" class="mobile-nav-link">Nuestro Equipo</a>
+        <a href="#preguntas" class="mobile-nav-link">Preguntas Frecuentes</a>
+        <a href="#cotizar" class="btn btn-primary btn-full">Cotizar mi página web</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow-badge hero-anim hero-anim-1">
+            <span class="badge-dot" aria-hidden="true"></span>
+            <span>Diseño y desarrollo web para pequeños emprendimientos</span>
+          </div>
+
+          <h1 class="hero-title hero-anim hero-anim-2">
+            Páginas web a medida que convierten visitas en <span class="serif-italic">clientes reales.</span>
+          </h1>
+
+          <p class="hero-description hero-anim hero-anim-3">
+            Ayudamos a negocios y emprendedores a dar el salto profesional en internet con sitios rápidos, minimalistas y pensados para generar consultas y pedidos todos los días.
+          </p>
+
+          <div class="hero-cta-group hero-anim hero-anim-4">
+            <a href="#cotizar" class="btn btn-primary btn-lg">
+              <span>Solicitar cotización</span>
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#soluciones" class="btn btn-secondary btn-lg">
+              <span>Ver formatos de páginas</span>
+            </a>
+          </div>
+
+          <dl class="hero-metrics hero-anim hero-anim-5" aria-label="Pilares de nuestro servicio">
+            <div class="metric-item">
+              <dt>Trato directo</dt>
+              <dd>Dupla de 2 especialistas</dd>
+            </div>
+            <div class="metric-item">
+              <dt>100% Adaptable</dt>
+              <dd>Celular, tablet y PC</dd>
+            </div>
+            <div class="metric-item">
+              <dt>0% Comisiones</dt>
+              <dd>Ventas directo a tu WhatsApp</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Mockup Interactivo en Hero -->
+        <div class="hero-showcase hero-anim hero-anim-mockup" aria-label="Vista previa interactiva de diseño adaptable">
+          <div class="showcase-toolbar">
+            <div class="window-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="showcase-url">tu-emprendimiento.com</div>
+            <div class="device-switcher" role="group" aria-label="Cambiar vista de dispositivo">
+              <button type="button" class="device-btn active" data-device="desktop" aria-pressed="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+                <span>PC</span>
+              </button>
+              <button type="button" class="device-btn" data-device="mobile" aria-pressed="false">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="5" y="2" width="14" height="20" rx="2" />
+                  <path d="M12 18h.01" />
+                </svg>
+                <span>Móvil</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="showcase-viewport" id="hero-viewport" data-view="desktop">
+            <div class="mock-site">
+              <div class="mock-header">
+                <div class="mock-logo">
+                  <span class="mock-logo-circle"></span>
+                  <span>Atelier Botánico</span>
+                </div>
+                <div class="mock-nav-pills">
+                  <span>Catálogo</span>
+                  <span>Envíos</span>
+                  <span class="mock-cta-pill">Hacer pedido</span>
+                </div>
+              </div>
+
+              <div class="mock-body">
+                <div class="mock-hero-card">
+                  <span class="mock-tag">Tienda Online + WhatsApp</span>
+                  <p class="mock-heading">Diseño limpio donde tus productos son los protagonistas.</p>
+                  <div class="mock-stats-row">
+                    <div class="mock-stat">
+                      <strong>+68%</strong>
+                      <span>Consultas calificadas</span>
+                    </div>
+                    <div class="mock-stat">
+                      <strong>&lt; 1.1s</strong>
+                      <span>Tiempo de carga</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mock-products-grid">
+                  <div class="mock-product-card">
+                    <div class="mock-img-placeholder aspect-1">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path d="M12 2a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9A9 9 0 0 0 12 2Z" />
+                        <path d="M12 6v6l4 2" />
+                      </svg>
+                    </div>
+                    <div class="mock-product-info">
+                      <span class="mock-p-title">Catálogo autogestionable</span>
+                      <span class="mock-p-sub">Tus clientes arman su pedido</span>
+                    </div>
+                  </div>
+
+                  <div class="mock-product-card">
+                    <div class="mock-img-placeholder aspect-2">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                      </svg>
+                    </div>
+                    <div class="mock-product-info">
+                      <span class="mock-p-title">Conexión con WhatsApp</span>
+                      <span class="mock-p-sub">Recibe pedidos listos para cobrar</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. POR QUÉ UNA WEB PROFESIONAL (Swiss Grid) -->
+    <section class="pillars-section">
+      <div class="container">
+        <div class="section-header-split reveal-on-scroll">
+          <div>
+            <span class="section-kicker">El valor de tu propio espacio digital</span>
+            <h2 class="section-title">Las redes sociales atraen miradas. Tu página web <span class="serif-italic">cierra las ventas.</span></h2>
+          </div>
+          <p class="section-lead">
+            Depender únicamente de Instagram o responder las mismas preguntas por privado quita tiempo y frena el crecimiento de tu emprendimiento.
+          </p>
+        </div>
+
+        <div class="swiss-grid-3 reveal-on-scroll">
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <h3 class="pillar-title">Confianza inmediata</h3>
+            <p class="pillar-text">
+              Un diseño cuidado y un dominio propio (<code>tunegocio.com</code>) transmiten seriedad desde el primer segundo y te diferencian de la competencia informal.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <h3 class="pillar-title">Atención y ventas 24/7</h3>
+            <p class="pillar-text">
+              Tus clientes pueden ver qué ofreces, resolver sus dudas frecuentes, elegir productos o solicitar un turno a cualquier hora sin esperar a que respondas.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+              </svg>
+            </div>
+            <h3 class="pillar-title">Pensada para el celular</h3>
+            <p class="pillar-text">
+              Más del 85% de las visitas desde redes sociales llegan desde un teléfono. Diseñamos cada pantalla para que navegar y contactarte sea rápido e intuitivo.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SOLUCIONES / FORMATOS DE PÁGINAS WEB (Sin precios fijos, botón de cotizar) -->
+    <section class="solutions-section" id="soluciones">
+      <div class="container">
+        <div class="section-header-center reveal-on-scroll">
+          <span class="section-kicker">Soluciones a medida</span>
+          <h2 class="section-title">Elige el formato ideal para la etapa de tu emprendimiento</h2>
+          <p class="section-lead">
+            Cada negocio es distinto. Por eso diseñamos tu página según tus objetivos concretos y cotizamos solo lo que realmente necesitas.
+          </p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Formato 1: Landing Page -->
+          <article class="package-card reveal-on-scroll">
+            <div class="package-top">
+              <div class="package-meta">
+                <span class="package-number">01</span>
+                <span class="package-badge">Entrega ágil · 5 a 7 días</span>
+              </div>
+              <h3 class="package-name">Landing Page de Conversión</h3>
+              <p class="package-summary">
+                Una página única, directa y persuasiva diseñada para presentar tu servicio o producto estrella y transformar visitantes en consultas reales.
+              </p>
+            </div>
+
+            <div class="package-ideal">
+              <strong>Ideal para:</strong> Profesionales independientes, servicios locales, lanzamientos o emprendimientos que buscan presencia profesional rápida.
+            </div>
+
+            <div class="package-features-wrap">
+              <p class="features-heading">Qué incluye este formato:</p>
+              <ul class="package-features">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Diseño 100% personalizado en una página de alto impacto</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Sección de beneficios, galería/muestras, testimonios y preguntas</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Botón directo a WhatsApp y formulario de contacto inteligente</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Optimización completa para celulares y carga ultrarrápida</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Integración con redes sociales y ubicación en Google Maps</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="package-footer">
+              <button type="button" class="btn btn-secondary btn-full js-select-package" data-package="Landing Page de Conversión">
+                <span>Cotizar Landing Page</span>
+                <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Formato 2: Catálogo Digital / Tienda WhatsApp (Destacado) -->
+          <article class="package-card package-featured reveal-on-scroll">
+            <div class="featured-ribbon">Más elegido por emprendimientos</div>
+            <div class="package-top">
+              <div class="package-meta">
+                <span class="package-number">02</span>
+                <span class="package-badge">Entrega · 7 a 12 días</span>
+              </div>
+              <h3 class="package-name">Catálogo Web + Pedidos por WhatsApp</h3>
+              <p class="package-summary">
+                Tus clientes exploran tus productos por categoría, arman su carrito y te envían el pedido detallado directo a tu WhatsApp, sin pagar comisiones.
+              </p>
+            </div>
+
+            <div class="package-ideal">
+              <strong>Ideal para:</strong> Tiendas de indumentaria, gastronomía, pastelerías, cosmética, artículos de diseño, bazares y comercios minoristas.
+            </div>
+
+            <div class="package-features-wrap">
+              <p class="features-heading">Qué incluye este formato:</p>
+              <ul class="package-features">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Catálogo interactivo con filtros por categoría y buscador</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Carrito de compras que genera el resumen listo en WhatsApp</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>0% de comisión por venta: cobras directo por transferencia o efectivo</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Guía práctica para actualizar productos, fotos, precios y stock</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Sección de métodos de envío, horarios y preguntas frecuentes</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="package-footer">
+              <button type="button" class="btn btn-primary btn-full js-select-package" data-package="Catálogo Web + Pedidos por WhatsApp">
+                <span>Cotizar Catálogo Web</span>
+                <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Formato 3: Sitio Web Completo / Institucional -->
+          <article class="package-card reveal-on-scroll">
+            <div class="package-top">
+              <div class="package-meta">
+                <span class="package-number">03</span>
+                <span class="package-badge">Entrega · 10 a 15 días</span>
+              </div>
+              <h3 class="package-name">Sitio Web Completo / Multipágina</h3>
+              <p class="package-summary">
+                Un sitio integral con múltiples secciones o funcionalidades específicas (reservas de turnos, portafolio detallado o posicionamiento en Google).
+              </p>
+            </div>
+
+            <div class="package-ideal">
+              <strong>Ideal para:</strong> Estudios profesionales, consultorios, centros de estética, inmobiliarias o negocios en expansión que buscan autoridad de marca.
+            </div>
+
+            <div class="package-features-wrap">
+              <p class="features-heading">Qué incluye este formato:</p>
+              <ul class="package-features">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Arquitectura multipágina (Inicio, Servicios, Nosotros, Proyectos, Contacto)</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Integración de sistema de turnos/agenda o formularios avanzados</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Optimización SEO técnica y local para aparecer en buscadores</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Redacción persuasiva y acompañamiento en estructura de contenidos</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Capacitación personalizada y soporte post-lanzamiento incluido</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="package-footer">
+              <button type="button" class="btn btn-secondary btn-full js-select-package" data-package="Sitio Web Completo / Multipágina">
+                <span>Cotizar Sitio Completo</span>
+                <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="custom-solution-banner reveal-on-scroll">
+          <div class="banner-text">
+            <strong>¿No sabes qué formato se adapta mejor a tu negocio?</strong>
+            <p>Cuéntanos a qué se dedica tu emprendimiento y te recomendamos la opción más rentable sin compromiso.</p>
+          </div>
+          <button type="button" class="btn btn-secondary js-select-package" data-package="Necesito asesoramiento personalizado">
+            Pedir asesoramiento gratuito
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. EJEMPLOS VISUALES POR RUBRO (con hidden="until-found" + beforematch) -->
+    <section class="examples-section" id="ejemplos">
+      <div class="container">
+        <div class="section-header-split reveal-on-scroll">
+          <div>
+            <span class="section-kicker">Adaptado a tu rubro</span>
+            <h2 class="section-title">Cómo se adapta una web a distintos <span class="serif-italic">tipos de negocio</span></h2>
+          </div>
+          <p class="section-lead">
+            No usamos la misma estructura para todos. Diseñamos las secciones según cómo decide la compra el cliente de tu sector.
+          </p>
+        </div>
+
+        <div class="industry-showcase reveal-on-scroll" id="industry-showcase">
+          <div class="industry-tabs" role="tablist" aria-label="Ejemplos por rubro">
+            <button type="button" class="industry-tab" role="tab" id="tab-gastronomia" aria-selected="true" aria-controls="panel-gastronomia">
+              Gastronomía y Cafeterías
+            </button>
+            <button type="button" class="industry-tab" role="tab" id="tab-tiendas" aria-selected="false" aria-controls="panel-tiendas">
+              Moda, Tiendas y Productos
+            </button>
+            <button type="button" class="industry-tab" role="tab" id="tab-servicios" aria-selected="false" aria-controls="panel-servicios">
+              Servicios y Profesionales
+            </button>
+            <button type="button" class="industry-tab" role="tab" id="tab-estetica" aria-selected="false" aria-controls="panel-estetica">
+              Salud, Estética y Turnos
+            </button>
+          </div>
+
+          <!-- Panel 1: Gastronomía -->
+          <div id="panel-gastronomia" class="industry-panel" role="tabpanel" aria-labelledby="tab-gastronomia">
+            <div class="industry-panel-inner">
+              <div class="industry-info">
+                <span class="industry-tag">Restaurantes · Pastelerías · Viandas · Cafés</span>
+                <h3>Menú digital interactivo y pedidos sin comisiones</h3>
+                <p>
+                  Tus clientes ven fotos tentadoras de tus platos o productos, eligen adicionales, calculan el total automáticamente y te envían el pedido listo por WhatsApp con su dirección de entrega o retiro.
+                </p>
+                <ul class="industry-highlights">
+                  <li>Carta digital con categorías claras y buscador instantáneo</li>
+                  <li>Botón de reserva de mesas o encargos por fecha</li>
+                  <li>Horarios de atención, zona de envíos y mapa interactivo</li>
+                </ul>
+                <button type="button" class="btn btn-primary js-select-industry" data-package="Catálogo Web + Pedidos por WhatsApp" data-industry="Gastronomía / Alimentos">
+                  <span>Cotizar web para gastronomía</span>
+                  <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </button>
+              </div>
+
+              <div class="industry-preview-card" aria-hidden="true">
+                <div class="preview-browser-bar">
+                  <span></span><span></span><span></span>
+                  <small>casa-oliva-bakery.com</small>
+                </div>
+                <div class="preview-canvas">
+                  <div class="preview-header-strip">
+                    <strong>Casa Oliva · Masa Madre & Café</strong>
+                    <span class="preview-badge-open">Abierto ahora</span>
+                  </div>
+                  <div class="preview-menu-list">
+                    <div class="preview-menu-item">
+                      <div>
+                        <strong>Box Desayuno Artesanal</strong>
+                        <span>Croissants, jugo natural, café de especialidad y frutas</span>
+                      </div>
+                      <span class="preview-add-btn">+ Agregar</span>
+                    </div>
+                    <div class="preview-menu-item">
+                      <div>
+                        <strong>Torta Pistacho & Frambuesa</strong>
+                        <span>8 porciones · Encargo con 24hs de anticipación</span>
+                      </div>
+                      <span class="preview-add-btn">+ Agregar</span>
+                    </div>
+                    <div class="preview-cart-bar">
+                      <span>2 productos seleccionados</span>
+                      <strong>Enviar pedido por WhatsApp →</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Tiendas -->
+          <div id="panel-tiendas" class="industry-panel" role="tabpanel" aria-labelledby="tab-tiendas" hidden="until-found">
+            <div class="industry-panel-inner">
+              <div class="industry-info">
+                <span class="industry-tag">Indumentaria · Deco · Cosmética · Emprendimientos</span>
+                <h3>Vitrina digital ordenada que vende mientras descansas</h3>
+                <p>
+                  Olvídate de enviar fotos sueltas o PDFs pesados. Muestra tus productos con talles, colores y disponibilidad en una tienda rápida que transmite imagen de gran marca.
+                </p>
+                <ul class="industry-highlights">
+                  <li>Filtros por categoría, talle o colección de temporada</li>
+                  <li>Guía de talles, medios de pago y políticas de cambio visibles</li>
+                  <li>Carrito directo a WhatsApp para cerrar el pago sin comisiones</li>
+                </ul>
+                <button type="button" class="btn btn-primary js-select-industry" data-package="Catálogo Web + Pedidos por WhatsApp" data-industry="Tienda / Venta de Productos">
+                  <span>Cotizar web para mi tienda</span>
+                  <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </button>
+              </div>
+
+              <div class="industry-preview-card" aria-hidden="true">
+                <div class="preview-browser-bar">
+                  <span></span><span></span><span></span>
+                  <small>kora-indumentaria.com</small>
+                </div>
+                <div class="preview-canvas">
+                  <div class="preview-header-strip">
+                    <strong>KORA · Colección Otoño</strong>
+                    <span class="preview-badge-neutral">Envíos a todo el país</span>
+                  </div>
+                  <div class="preview-shop-grid">
+                    <div class="preview-shop-card">
+                      <div class="preview-cloth-box">Lino Natural</div>
+                      <strong>Camisa Oversize Arena</strong>
+                      <span>Talles S · M · L</span>
+                    </div>
+                    <div class="preview-shop-card">
+                      <div class="preview-cloth-box">Algodón Orgánico</div>
+                      <strong>Sastrero Minimal Negro</strong>
+                      <span>Talles S · M · L</span>
+                    </div>
+                  </div>
+                  <div class="preview-cart-bar">
+                    <span>3 cuotas sin interés / 15% OFF Transferencia</span>
+                    <strong>Consultar stock →</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Servicios -->
+          <div id="panel-servicios" class="industry-panel" role="tabpanel" aria-labelledby="tab-servicios" hidden="until-found">
+            <div class="industry-panel-inner">
+              <div class="industry-info">
+                <span class="industry-tag">Contadores · Arquitectos · Agencias · Oficios Técnicos</span>
+                <h3>Autoridad profesional para captar mejores clientes</h3>
+                <p>
+                  Cuando alguien busca un servicio profesional, compara quién le genera mayor seguridad. Presenta tu metodología, casos de éxito y formulario de diagnóstico para filtrar consultas serias.
+                </p>
+                <ul class="industry-highlights">
+                  <li>Presentación clara de servicios, proceso y credenciales</li>
+                  <li>Portafolio de trabajos realizados o testimonios verificables</li>
+                  <li>Formulario de pre-diagnóstico para recibir clientes calificados</li>
+                </ul>
+                <button type="button" class="btn btn-primary js-select-industry" data-package="Landing Page de Conversión" data-industry="Servicios Profesionales">
+                  <span>Cotizar web profesional</span>
+                  <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </button>
+              </div>
+
+              <div class="industry-preview-card" aria-hidden="true">
+                <div class="preview-browser-bar">
+                  <span></span><span></span><span></span>
+                  <small>estudio-valdez-arquitectura.com</small>
+                </div>
+                <div class="preview-canvas">
+                  <div class="preview-header-strip">
+                    <strong>Estudio Valdez · Arquitectura & Interiorismo</strong>
+                    <span class="preview-badge-neutral">Proyectos Llave en Mano</span>
+                  </div>
+                  <div class="preview-menu-list">
+                    <div class="preview-menu-item">
+                      <div>
+                        <strong>01. Reformas Residenciales</strong>
+                        <span>Diseño espacial, dirección de obra y optimización de presupuesto</span>
+                      </div>
+                      <span class="preview-add-btn">Ver obras</span>
+                    </div>
+                    <div class="preview-menu-item">
+                      <div>
+                        <strong>02. Locales Comerciales</strong>
+                        <span>Espacios pensados para potenciar la experiencia de marca</span>
+                      </div>
+                      <span class="preview-add-btn">Ver obras</span>
+                    </div>
+                    <div class="preview-cart-bar">
+                      <span>Agenda tu reunión inicial sin cargo</span>
+                      <strong>Solicitar presupuesto →</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Estética y Salud -->
+          <div id="panel-estetica" class="industry-panel" role="tabpanel" aria-labelledby="tab-estetica" hidden="until-found">
+            <div class="industry-panel-inner">
+              <div class="industry-info">
+                <span class="industry-tag">Centros de Estética · Odontología · Psicología · Fitness</span>
+                <h3>Agenda ordenada y presentación impecable de tratamientos</h3>
+                <p>
+                  Facilita que tus pacientes o clientes conozcan cada servicio en detalle, resuelvan dudas previas y soliciten su turno sin idas y vueltas interminables.
+                </p>
+                <ul class="industry-highlights">
+                  <li>Fichas claras por tratamiento o sesión con duración y beneficios</li>
+                  <li>Integración con agenda de turnos o solicitud directa por especialista</li>
+                  <li>Ubicación del consultorio/centro y preguntas frecuentes pre-consulta</li>
+                </ul>
+                <button type="button" class="btn btn-primary js-select-industry" data-package="Sitio Web Completo / Multipágina" data-industry="Salud / Estética / Bienestar">
+                  <span>Cotizar web para salud o estética</span>
+                  <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </button>
+              </div>
+
+              <div class="industry-preview-card" aria-hidden="true">
+                <div class="preview-browser-bar">
+                  <span></span><span></span><span></span>
+                  <small>aura-dermoestetica.com</small>
+                </div>
+                <div class="preview-canvas">
+                  <div class="preview-header-strip">
+                    <strong>Aura · Clínica de Bienestar & Piel</strong>
+                    <span class="preview-badge-open">Turnos online</span>
+                  </div>
+                  <div class="preview-menu-list">
+                    <div class="preview-menu-item">
+                      <div>
+                        <strong>Diagnóstico Facial Personalizado</strong>
+                        <span>Evaluación dermoestética · 45 min · Presencial</span>
+                      </div>
+                      <span class="preview-add-btn">Reservar</span>
+                    </div>
+                    <div class="preview-menu-item">
+                      <div>
+                        <strong>Limpieza Profunda & Hidratación</strong>
+                        <span>Protocolo completo con activos botánicos · 60 min</span>
+                      </div>
+                      <span class="preview-add-btn">Reservar</span>
+                    </div>
+                    <div class="preview-cart-bar">
+                      <span>Confirmación inmediata por WhatsApp</span>
+                      <strong>Elegir día y horario →</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROCESO DE TRABAJO (4 Pasos Simples) -->
+    <section class="process-section" id="proceso">
+      <div class="container">
+        <div class="section-header-center reveal-on-scroll">
+          <span class="section-kicker">Cómo trabajamos</span>
+          <h2 class="section-title">Un proceso simple, transparente y sin tecnicismos</h2>
+          <p class="section-lead">
+            Sabemos que estás ocupado llevando adelante tu emprendimiento. Nosotros nos encargamos de todo el trabajo pesado de principio a fin.
+          </p>
+        </div>
+
+        <ol class="process-grid">
+          <li class="process-step reveal-on-scroll">
+            <div class="step-header">
+              <span class="step-num">Paso 01</span>
+              <span class="step-time">Día 1</span>
+            </div>
+            <h3 class="step-title">Charla inicial y enfoque</h3>
+            <p class="step-desc">
+              Conocemos tu emprendimiento, qué vendes, quién es tu cliente ideal y definimos qué secciones necesita tu página para generar resultados.
+            </p>
+          </li>
+
+          <li class="process-step reveal-on-scroll">
+            <div class="step-header">
+              <span class="step-num">Paso 02</span>
+              <span class="step-time">Días 2 – 4</span>
+            </div>
+            <h3 class="step-title">Diseño visual y estructura</h3>
+            <p class="step-desc">
+              Armamos la propuesta estética minimalista alineada a tu marca y redactamos los textos estratégicos para que los revises con tranquilidad.
+            </p>
+          </li>
+
+          <li class="process-step reveal-on-scroll">
+            <div class="step-header">
+              <span class="step-num">Paso 03</span>
+              <span class="step-time">Días 5 – 8</span>
+            </div>
+            <h3 class="step-title">Desarrollo y optimización</h3>
+            <p class="step-desc">
+              Programamos tu sitio web cuidando cada detalle en celulares, velocidad de carga, botones de contacto y posicionamiento en buscadores.
+            </p>
+          </li>
+
+          <li class="process-step reveal-on-scroll">
+            <div class="step-header">
+              <span class="step-num">Paso 04</span>
+              <span class="step-time">Lanzamiento</span>
+            </div>
+            <h3 class="step-title">Publicación y acompañamiento</h3>
+            <p class="step-desc">
+              Conectamos tu dominio propio, dejamos la web funcionando al 100% y te mostramos cómo aprovecharla para empezar a recibir clientes.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6. NUESTRO EQUIPO (Dupla de 2 Personas) -->
+    <section class="team-section" id="equipo">
+      <div class="container">
+        <div class="team-layout">
+          <div class="team-intro reveal-on-scroll">
+            <span class="section-kicker">Quiénes están detrás</span>
+            <h2 class="section-title">Somos un equipo de dos personas. <span class="serif-italic">Y esa es tu mayor ventaja.</span></h2>
+            <p class="team-lead">
+              En las agencias tradicionales hablas con un vendedor y tu proyecto pasa por cinco manos distintas. Con nosotros tienes <strong>trato directo, rápido y personalizado</strong> con las dos personas que diseñan y programan tu página web.
+            </p>
+
+            <div class="team-values">
+              <div class="value-row">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                <span><strong>Comunicación sin filtro:</strong> Hablas por WhatsApp directo con quienes están construyendo tu sitio.</span>
+              </div>
+              <div class="value-row">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                <span><strong>Dedicación real:</strong> Tomamos pocos proyectos en simultáneo para cuidar cada detalle visual y técnico.</span>
+              </div>
+              <div class="value-row">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                <span><strong>Presupuesto justo:</strong> Sin costos inflados de estructura corporativa, manteniendo calidad de estudio boutique.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-cards">
+            <article class="member-card reveal-on-scroll">
+              <div class="member-header">
+                <div class="member-avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                    <path d="M2 2l7.586 7.586" />
+                    <circle cx="11" cy="11" r="2" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="member-role">Co-Fundador · Diseño UI/UX & Marca</span>
+                  <h3 class="member-name">Dirección de Diseño y Experiencia</h3>
+                </div>
+              </div>
+              <p class="member-bio">
+                Enfocado en traducir la identidad de tu emprendimiento en una interfaz limpia, moderna y fácil de navegar, asegurando que cada visitante entienda tu valor en segundos.
+              </p>
+              <div class="member-skills">
+                <span>Diseño UI/UX</span>
+                <span>Identidad Visual</span>
+                <span>Arquitectura de Conversión</span>
+              </div>
+            </article>
+
+            <article class="member-card reveal-on-scroll">
+              <div class="member-header">
+                <div class="member-avatar" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="member-role">Co-Fundador · Desarrollo & Rendimiento</span>
+                  <h3 class="member-name">Ingeniería Web y Optimización</h3>
+                </div>
+              </div>
+              <p class="member-bio">
+                Enfocado en que tu sitio cargue al instante, funcione sin fallas en cualquier celular, esté optimizado para Google y conecte tus consultas directamente con tu WhatsApp.
+              </p>
+              <div class="member-skills">
+                <span>Desarrollo Frontend</span>
+                <span>SEO Técnico</span>
+                <span>Automatización WhatsApp</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PREGUNTAS FRECUENTES (FAQ con <details name="faq-accordion">) -->
+    <section class="faq-section" id="preguntas">
+      <div class="container faq-container">
+        <div class="section-header-center reveal-on-scroll">
+          <span class="section-kicker">Dudas frecuentes</span>
+          <h2 class="section-title">Respuestas claras antes de empezar</h2>
+          <p class="section-lead">
+            Todo lo que necesitas saber sobre tiempos, mantenimiento y cómo trabajamos juntos.
+          </p>
+        </div>
+
+        <div class="accordion-group reveal-on-scroll">
+          <details class="faq-item" name="faq-accordion" open>
+            <summary class="faq-question">
+              <span>¿Tengo que pagar una mensualidad obligatoria por la página web?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No cobramos mensualidades forzosas para que tu página siga siendo tuya. El desarrollo se abona por única vez. Solo existen los costos básicos anuales de cualquier sitio en internet (tu dominio <code>.com</code> y alojamiento web), o si prefieres desentenderte por completo de actualizaciones futuras, ofrecemos un plan opcional de mantenimiento a medida.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq-accordion">
+            <summary class="faq-question">
+              <span>¿Qué necesito tener listo para comenzar con mi página?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No necesitas tener todo resuelto. Con que nos cuentes a qué se dedica tu emprendimiento, qué productos o servicios ofreces y algunas fotos reales o referencias, nosotros te ayudamos a estructurar los textos, organizar las secciones y darle forma profesional.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq-accordion">
+            <summary class="faq-question">
+              <span>¿Cuánto demora estar en línea?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Una <strong>Landing Page</strong> suele estar lista entre 5 y 7 días hábiles. Un <strong>Catálogo con pedidos por WhatsApp</strong> o un <strong>Sitio Completo</strong> toma entre 7 y 15 días hábiles según la cantidad de secciones o productos.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq-accordion">
+            <summary class="faq-question">
+              <span>¿Puedo pedir cambios durante el proceso de diseño?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Por supuesto. Antes de dar por terminado el proyecto, te compartimos avances reales para que puedas probar la web en tu celular y computadora, y realizamos los ajustes necesarios hasta que estés 100% conforme con el resultado.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq-accordion">
+            <summary class="faq-question">
+              <span>¿Cómo se abona el proyecto?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Trabajamos con una modalidad simple y segura para ambas partes: 50% al iniciar el proyecto y reservar tu lugar en nuestra agenda, y el 50% restante una vez que la página está lista y aprobada para su lanzamiento.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SECCIÓN DE COTIZACIÓN INTERACTIVA -->
+    <section class="quote-section" id="cotizar">
+      <div class="container">
+        <div class="quote-wrapper reveal-on-scroll">
+          <div class="quote-info">
+            <span class="section-kicker kicker-light">Demos el primer paso</span>
+            <h2 class="quote-title">Cotiza la página web de tu emprendimiento</h2>
+            <p class="quote-description">
+              Completa estos breves datos sobre tu negocio y te responderemos en menos de 24 horas con una propuesta clara y adaptada a lo que necesitas.
+            </p>
+
+            <div class="quote-perks">
+              <div class="quote-perk">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                <span>Presupuesto claro y sin compromiso</span>
+              </div>
+              <div class="quote-perk">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                <span>Asesoramiento sobre el formato ideal para tu rubro</span>
+              </div>
+              <div class="quote-perk">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                <span>Respuesta directa de nuestro equipo</span>
+              </div>
+            </div>
+
+            <div class="direct-contact-box">
+              <p class="direct-label">¿Prefieres escribirnos directamente?</p>
+              <a href="https://wa.me/56972652673?text=Hola%20Nexo%20Webs!%20Me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20emprendimiento." target="_blank" rel="noopener noreferrer" class="direct-wa-link" id="direct-wa-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                <span>WhatsApp directo: +56 9 7265 2673</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="quote-form-card">
+            <form id="quote-form" novalidate>
+              <div class="form-error-summary" id="form-error-summary" role="alert" tabindex="-1" hidden>
+                <p>Por favor completa los campos marcados para armar tu solicitud:</p>
+                <ul id="form-error-list"></ul>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="client-name" class="form-label">Tu nombre <span class="req">*</span></label>
+                  <input type="text" id="client-name" name="clientName" class="form-input" placeholder="Ej. Martín Gómez" autocomplete="name" required />
+                  <span class="field-error" id="error-client-name" hidden>Ingresa tu nombre.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="business-name" class="form-label">Nombre o rubro del emprendimiento <span class="req">*</span></label>
+                  <input type="text" id="business-name" name="businessName" class="form-input" placeholder="Ej. Café del Sur / Tienda de Ropa" autocomplete="organization" required />
+                  <span class="field-error" id="error-business-name" hidden>Indica el nombre o rubro de tu negocio.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="package-select" class="form-label">¿Qué tipo de página te interesa cotizar? <span class="req">*</span></label>
+                <select id="package-select" name="packageType" class="form-input form-select" required>
+                  <option value="Landing Page de Conversión">01 · Landing Page de Conversión (Página única)</option>
+                  <option value="Catálogo Web + Pedidos por WhatsApp" selected>02 · Catálogo Web + Pedidos por WhatsApp</option>
+                  <option value="Sitio Web Completo / Multipágina">03 · Sitio Web Completo / Multipágina</option>
+                  <option value="Necesito asesoramiento personalizado">No estoy seguro · Quiero que me asesoren</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="project-details" class="form-label">Cuéntanos brevemente qué buscas lograr (Opcional)</label>
+                <textarea id="project-details" name="projectDetails" rows="3" class="form-input form-textarea" placeholder="Ej. Quiero mostrar mis productos con precios y que mis clientes me hagan pedidos por WhatsApp..."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-full btn-lg">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                  </svg>
+                  <span>Enviar solicitud por WhatsApp</span>
+                </button>
+
+                <button type="button" id="send-email-btn" class="btn btn-secondary btn-full">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  <span>Prefiero cotizar por correo electrónico</span>
+                </button>
+              </div>
+
+              <p class="form-footnote" id="form-feedback" aria-live="polite">
+                Al enviar, se abrirá tu aplicación de WhatsApp o correo con los datos listos para enviarnos.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Minimalista -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand-col">
+        <a href="#top" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="Frame%201.svg" alt="" width="24" height="26" class="brand-logo-svg" />
+          </span>
+          <span class="brand-name" data-brand-name>Nexo Webs</span>
+        </a>
+        <p class="footer-tagline">
+          Diseño y desarrollo de páginas web personalizadas para pequeños emprendimientos.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <a href="#soluciones">Formatos Web</a>
+        <a href="#ejemplos">Rubros</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#preguntas">FAQ</a>
+        <a href="#cotizar">Cotizar</a>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; <span id="current-year">2026</span> <span data-brand-name>Nexo Webs</span>. Hecho con dedicación para emprendedores.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
