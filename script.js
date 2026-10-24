@@ -335,11 +335,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const subject = `Solicitud de cotización web — ${data.businessName}`;
       const body = buildQuoteMessage(data);
-      const mailtoUrl = `mailto:${STUDIO_CONFIG.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
       if (formFeedback) {
-        formFeedback.textContent = 'Abriendo tu aplicación de correo electrónico...';
+        formFeedback.textContent = 'Abriendo Gmail con tu cotización lista para enviar...';
       }
-      window.location.href = mailtoUrl;
+
+      // Enlace directo a Gmail Web (instantáneo en PC)
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(STUDIO_CONFIG.contactEmail)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoUrl = `mailto:${STUDIO_CONFIG.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = mailtoUrl;
+      } else {
+        const win = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+        if (!win || win.closed || typeof win.closed === 'undefined') {
+          window.location.href = mailtoUrl;
+        }
+      }
     });
   }
 });
